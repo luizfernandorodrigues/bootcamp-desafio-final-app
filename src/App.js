@@ -7,8 +7,8 @@ export default function App() {
       <div className="center">
         <h1>Bootcamp Full Stack - Desafio Final</h1>
         <h2>Bootcamp Full Stack - Desafio Final</h2>
-        <Navigation />
       </div>
+      <Navigation />
     </div>
   );
 }
