@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
+import Totalizers from './components/Totalizers/Totalizers';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         </h2>
       </div>
       <Navigation />
+      <Totalizers />
     </div>
   );
 }
