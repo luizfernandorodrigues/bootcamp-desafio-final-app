@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Totalizers from './components/Totalizers/Totalizers';
+import NewAndFilter from './components/NewAndFilter/NewAndFilter';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       </div>
       <Navigation />
       <Totalizers />
+      <NewAndFilter />
     </div>
   );
 }
