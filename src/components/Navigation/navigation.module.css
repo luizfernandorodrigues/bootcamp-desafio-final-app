@@ -7,9 +7,11 @@
 }
 
 .button {
-  margin-left: 5px;
-  margin-right: 5px;
-  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .select {
