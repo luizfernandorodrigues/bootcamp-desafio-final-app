@@ -5,7 +5,10 @@ export default function Navigation() {
   return (
     <div className={css.divMain}>
       <button className={css.button}>&lt; </button>
-      <select className={css.select}>
+      <select
+        class="browser-default"
+        style='width: 150px; font-family: "Fira Code Retina", Consolas, monospace, Arial;'
+      >
         <option value="2019-01">Jan/2019</option>
         <option value="2019-02">Fev/2019</option>
         <option value="2019-03">Mar/2019</option>
