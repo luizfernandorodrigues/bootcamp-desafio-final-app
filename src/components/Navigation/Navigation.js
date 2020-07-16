@@ -4,7 +4,12 @@ import css from './navigation.module.css';
 export default function Navigation() {
   return (
     <div className={css.divMain}>
-      <button className={css.button}>&lt; </button>
+      <button
+        class="waves-effect waves-light btn"
+        style={{ marginLeft: '5px', marginRight: '5px', fontWeight: 'bold' }}
+      >
+        &lt;
+      </button>
       <select
         class="browser-default"
         style={{
@@ -49,7 +54,12 @@ export default function Navigation() {
         <option value="2021-11">Nov/2021</option>
         <option value="2021-12">Dez/2021</option>
       </select>
-      <button className={css.button}>&gt;</button>
+      <button
+        class="waves-effect waves-light btn"
+        style={{ marginLeft: '5px', marginRight: '5px', fontWeight: 'bold' }}
+      >
+        &gt;
+      </button>
     </div>
   );
 }
