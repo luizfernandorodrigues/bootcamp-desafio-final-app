@@ -7,7 +7,10 @@ export default function Navigation() {
       <button className={css.button}>&lt; </button>
       <select
         class="browser-default"
-        style='width: 150px; font-family: "Fira Code Retina", Consolas, monospace, Arial;'
+        style={{
+          width: '150px',
+          fontFamily: 'Fira Code Retina, Consolas, monospace, Arial',
+        }}
       >
         <option value="2019-01">Jan/2019</option>
         <option value="2019-02">Fev/2019</option>
