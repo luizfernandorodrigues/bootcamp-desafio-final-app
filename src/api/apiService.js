@@ -45,7 +45,7 @@ function _processPeriods() {
 }
 
 function _prepareTransactions(transaction) {
-  const { description, category, _id, month, ...otherFields } = transaction;
+  const { description, category, _id: id, month, ...otherFields } = transaction;
 
   return {
     id,
