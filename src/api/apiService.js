@@ -37,7 +37,7 @@ function _processPeriods() {
   GLOBAL_YEARS.forEach((x) => {
     GLOBAL_MONTHS.forEach((y) => {
       const id = `${x}-${y.toString().padStart(2, '0')}`;
-      const monthDescription = `${MONTH_DESCRIPTIONS[y]}/${x}}`;
+      const monthDescription = `${MONTH_DESCRIPTIONS[y]}/${x}`;
 
       allPeriods.push({ id, description: monthDescription, index: index++ });
     });
