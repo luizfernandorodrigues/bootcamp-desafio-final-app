@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import css from './navigation.module.css';
+import ArrowButton from '../ArrowButton/ArrowButton';
 
 export default function Navigation({
   allPeriods,
@@ -20,8 +20,14 @@ export default function Navigation({
       selectedPeriod.index === allPeriods.length - 1;
 
     setIsFirstPeriod(checkIsFirstPeriod(selectedPeriod.index));
-    setIsLasstPeriod(checkIsLastPeriod(selectedPeriod.index));
+    setIsLastPeriod(checkIsLastPeriod(selectedPeriod.index));
   }, [selectedPeriod, allPeriods]);
+
+  const handleSelectChange = (event) => {
+    onChangePeriod(
+      allPeriods.find((period) => period.id === event.target.value)
+    );
+  };
 
   const handleLeftButtonClick = () => {
     const index = allPeriods.findIndex((x) => x.id === selectedPeriod.id);
