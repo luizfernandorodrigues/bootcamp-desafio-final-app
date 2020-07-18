@@ -79,3 +79,5 @@ async function getTransactionsFrom(period) {
     a.yearMonthDay.localeCompare(b.yearMonthDay)
   );
 }
+
+export { getTransactionsFrom, getAllPeriods };
