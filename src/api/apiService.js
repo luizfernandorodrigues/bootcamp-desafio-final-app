@@ -80,14 +80,6 @@ async function getTransactionsFrom(period) {
   );
 }
 
-async function getAllPeriods() {
-  if (allPeriods.length === 0) {
-    _processPeriods();
-  }
-
-  return allPeriods;
-}
-
 async function deleteTransaction(id) {
   await api.delete(`${RESOURCE}/${id}`);
   return;
