@@ -80,4 +80,56 @@ async function getTransactionsFrom(period) {
   );
 }
 
-export { getTransactionsFrom, getAllPeriods };
+async function getAllPeriods() {
+  if (allPeriods.length === 0) {
+    _processPeriods();
+  }
+
+  return allPeriods;
+}
+
+async function deleteTransaction(id) {
+  await api.delete(`${RESOURCE}/${id}`);
+  return;
+}
+
+function getCompleteTransaction(transaction) {
+  const { yearMonthDay } = transaction;
+  const year = +yearMonthDay.substring(0, 4);
+  const month = +yearMonthDay.substring(5, 7);
+  const day = +yearMonthDay.substring(8, 10);
+
+  const completeTransaction = {
+    ...transaction,
+    year,
+    month,
+    day,
+  };
+
+  return completeTransaction;
+}
+
+async function updateTransaction(transaction) {
+  const { id } = transaction;
+  const completeTransaction = getCompleteTransaction(transaction);
+  await api.put(`${RESOURCE}/${id}`, completeTransaction);
+
+  const updatedTransaction = _prepareTransaction(completeTransaction);
+  return updatedTransaction;
+}
+
+async function postTransaction(transaction) {
+  const completeTransaction = getCompleteTransaction(transaction);
+  const { data } = await api.post(RESOURCE, completeTransaction);
+
+  const newTransaction = _prepareTransaction(data.transaction);
+  return newTransaction;
+}
+
+export {
+  getTransactionsFrom,
+  getAllPeriods,
+  deleteTransaction,
+  postTransaction,
+  updateTransaction,
+};
