@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import ArrowButton from './ArrowButton';
+import ArrowButton from '../ArrowButton/ArrowButton';
 
 export default function PeriodSelector({
   allPeriods,
