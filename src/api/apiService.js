@@ -71,7 +71,7 @@ async function getTransactionsFrom(period) {
   const { id: yearMonth } = period;
   const { data } = await api.get(`${RESOURCE}?period=${yearMonth}`);
 
-  const frontEndTransactions = data.transactions.map((x) => {
+  const frontEndTransactions = data.map((x) => {
     return _prepareTransaction(x);
   });
 
