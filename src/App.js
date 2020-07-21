@@ -5,6 +5,7 @@ import Spinner from './components/Spinner/Spinner';
 import Summary from './components/Summary/Summary';
 import ModalTransaction from './components/ModalTransaction/ModalTransaction';
 import Transactions from './components/Transactions/Transactions';
+import Actions from './components/Actions/Actions';
 
 function sortTransactions(transactions) {
   return transactions.sort((a, b) =>
