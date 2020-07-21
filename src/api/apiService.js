@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://luizfernando-desafio-final-api.herokuapp.com/',
+  baseURL: 'https://luizfernando-desafio-final-api.herokuapp.com/api',
   headers: {
     'Content-type': 'application/json',
   },
