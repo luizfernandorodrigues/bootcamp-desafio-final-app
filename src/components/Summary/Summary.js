@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { formatMoney } from '../helpers/formatHelpers';
+import { formatMoney } from '../../helpers/formatHelpers';
 
 const EARNING_COLOR = '#16a085';
 const EXPENSE_COLOR = '#c0392b';
