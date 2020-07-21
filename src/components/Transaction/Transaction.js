@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatMoney } from '../helpers/formatHelpers';
+import { formatMoney } from '../../helpers/formatHelpers';
 import Action from '../Action/Action';
 
 const EARNING_COLOR = '#A1F0DC';
