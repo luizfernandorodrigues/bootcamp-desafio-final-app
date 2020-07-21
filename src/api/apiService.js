@@ -44,7 +44,7 @@ function _processPeriods() {
   });
 }
 
-function _prepareTransactions(transaction) {
+function _prepareTransaction(transaction) {
   const { description, category, _id: id, month, ...otherFields } = transaction;
 
   return {
@@ -72,7 +72,7 @@ async function getTransactionsFrom(period) {
   const { data } = await api.get(`${RESOURCE}?period=${yearMonth}`);
 
   const frontEndTransactions = data.transactions.map((x) => {
-    return _prepareTransactions(x);
+    return _prepareTransaction(x);
   });
 
   return frontEndTransactions.sort((a, b) =>
