@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import * as api from './api/apiService';
 import Spinner from './components/Spinner/Spinner';
+import Summary from './components/Summary/Summary';
+import ModalTransaction from './components/ModalTransaction/ModalTransaction';
+import Transactions from './components/Transactions/Transactions';
 
 function sortTransactions(transactions) {
   return transactions.sort((a, b) =>
@@ -20,14 +23,14 @@ function getCurrentPeriod(allPeriods) {
 }
 
 export default function App() {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [allPeriods, setAllPeriods] = useState([]);
   const [currentPeriod, setCurrentPeriod] = useState([]);
   const [currentTransactions, setCurrentTransactions] = useState([]);
   const [filteredTransactions, setFilteredTransactions] = useState([]);
   const [selectedTransaction, setSelectedTransaction] = useState([]);
   const [filterText, setFilterText] = useState('');
-  const [sumary, setSumary] = useState(null);
+  const [summary, setSummary] = useState(null);
 
   //carrega os periodos da api
   useEffect(() => {
