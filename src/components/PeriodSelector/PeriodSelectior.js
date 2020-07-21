@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ArrowButton from '../ArrowButton/ArrowButton';
 
-export default function Navigation({
+import ArrowButton from './ArrowButton';
+
+export default function PeriodSelector({
   allPeriods,
   selectedPeriod,
   onChangePeriod,
@@ -30,13 +31,13 @@ export default function Navigation({
   };
 
   const handleLeftButtonClick = () => {
-    const index = allPeriods.findIndex((x) => x.id === selectedPeriod.id);
+    const index = allPeriods.findIndex((item) => item.id === selectedPeriod.id);
 
     onChangePeriod(allPeriods[index - 1]);
   };
 
   const handleRightButtonClick = () => {
-    const index = allPeriods.findIndex((x) => x.id === selectedPeriod.id);
+    const index = allPeriods.findIndex((item) => item.id === selectedPeriod.id);
 
     onChangePeriod(allPeriods[index + 1]);
   };

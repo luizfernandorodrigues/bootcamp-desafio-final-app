@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Navigation from './components/Navigation/Navigation';
 import * as api from './api/apiService';
 import Spinner from './components/Spinner/Spinner';
 import Summary from './components/Summary/Summary';
 import ModalTransaction from './components/ModalTransaction/ModalTransaction';
 import Transactions from './components/Transactions/Transactions';
 import Actions from './components/Actions/Actions';
+import PeriodSelector from './components/PeriodSelector/PeriodSelectior';
 
 function sortTransactions(transactions) {
   return transactions.sort((a, b) =>
@@ -180,7 +180,7 @@ export default function App() {
         <h2>Controle Financeiro Pessoal</h2>
       </div>
       {!isModalOpen && (
-        <Navigation
+        <PeriodSelector
           allPeriods={allPeriods}
           selectedPeriod={currentPeriod}
           onChangePeriod={handlePeriodChange}
