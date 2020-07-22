@@ -90,12 +90,14 @@ function getCompleteTransaction(transaction) {
   const year = +yearMonthDay.substring(0, 4);
   const month = +yearMonthDay.substring(5, 7);
   const day = +yearMonthDay.substring(8, 10);
+  const yearMonth = yearMonthDay.substring(0, 7);
 
   const completeTransaction = {
     ...transaction,
     year,
     month,
     day,
+    yearMonth,
   };
 
   return completeTransaction;
@@ -115,7 +117,7 @@ async function postTransaction(transaction) {
   const completeTransaction = getCompleteTransaction(transaction);
   const { data } = await api.post(RESOURCE, completeTransaction);
 
-  const newTransaction = _prepareTransaction(data.transaction);
+  const newTransaction = _prepareTransaction(data);
   return newTransaction;
 }
 
