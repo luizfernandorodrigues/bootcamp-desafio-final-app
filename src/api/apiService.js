@@ -111,6 +111,7 @@ async function updateTransaction(transaction) {
 }
 
 async function postTransaction(transaction) {
+  console.log(transaction);
   const completeTransaction = getCompleteTransaction(transaction);
   const { data } = await api.post(RESOURCE, completeTransaction);
 
